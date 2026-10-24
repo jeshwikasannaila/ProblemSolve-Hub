@@ -1,0 +1,17 @@
+{
+  "name": "problemsolve-hub",
+  "version": "1.0.0",
+  "description": "ProblemSolve Hub – Customer Problem Solving & Reward Platform",
+  "private": true,
+  "scripts": {
+    "start": "node server/src/server.js",
+    "server": "node server/src/server.js",
+    "client": "npm --prefix client run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "seed": "node server/src/db/seed.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
